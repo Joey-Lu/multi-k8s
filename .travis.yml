@@ -14,7 +14,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project plucky-shore-398601
   - gcloud config set compute/zone australia-southeast1
-  - gcloud container clusters get-credentials multi-cluster
+  - gcloud container clusters get-credentials multi-k8s
   - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_USERNAME" --password-stdin
   - docker build -t 99177812/react-test -f ./client/Dockerfile.dev ./client
 
